@@ -9,6 +9,7 @@ export const reports = {
     total: 227400,
     change: 12.8,
     quota: 84,
+    target: 270000,
     winRate: 32,
     averageDeal: 18400,
     chart: [
@@ -23,6 +24,7 @@ export const reports = {
     total: 684200,
     change: 8.4,
     quota: 91,
+    target: 750000,
     winRate: 36,
     averageDeal: 21200,
     chart: [
@@ -36,6 +38,7 @@ export const reports = {
     total: 1846200,
     change: 18.2,
     quota: 87,
+    target: 2120000,
     winRate: 34,
     averageDeal: 19800,
     chart: [
