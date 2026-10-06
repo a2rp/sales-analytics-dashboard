@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Header from './components/header/index.jsx'
+import DealsTable from './components/dealsTable/index.jsx'
 import MetricCards from './components/metricCards/index.jsx'
 import PipelineFunnel from './components/pipelineFunnel/index.jsx'
 import ReportControls from './components/reportControls/index.jsx'
@@ -21,6 +22,7 @@ const App = () => {
           <RevenueChart report={reports[period]} />
           <PipelineFunnel activeStage={activeStage} onStageChange={setActiveStage} />
         </div>
+        <DealsTable period={period} activeStage={activeStage} onStageChange={setActiveStage} />
       </main>
     </div>
   )

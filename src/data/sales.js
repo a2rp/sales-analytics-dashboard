@@ -1,6 +1,6 @@
 export const periods = [
   { id: 'month', label: 'Last 30 days' },
-  { id: 'quarter', label: 'This quarter' },
+  { id: 'quarter', label: 'Last quarter' },
   { id: 'year', label: 'Year to date' },
 ]
 
@@ -80,6 +80,8 @@ export const stages = [
   { name: 'Negotiation', count: 4, value: 438000 },
   { name: 'Closed won', count: 9, value: 315000 },
 ]
+
+export const dealStages = [...new Set(deals.map((deal) => deal.stage))]
 
 export const salesTeam = [
   { name: 'Maya Chen', role: 'Enterprise', closed: 12, revenue: 284600, initials: 'MC', image: 'images/candidate-1027.jpg' },
