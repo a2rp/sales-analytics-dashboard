@@ -66,7 +66,7 @@
       padding: 9px 0;
       color: #c2cbcf;
       border-bottom: 1px solid transparent;
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 700;
       transition: border-color 160ms ease, box-shadow 160ms ease;
 
@@ -90,7 +90,7 @@
     background: rgb(255 255 255 / 5%);
     border: 1px solid #58656b;
     border-radius: 9px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
     transition: border-color 160ms ease, box-shadow 160ms ease;
 

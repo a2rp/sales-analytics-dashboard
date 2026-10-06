@@ -23,7 +23,7 @@
     p {
       margin-top: 2px;
       color: var(--color-muted);
-      font-size: 12px;
+      font-size: 14px;
     }
   }
 
@@ -32,7 +32,7 @@
     align-items: center;
     gap: 5px;
     color: #397b62;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
     white-space: nowrap;
 
@@ -57,7 +57,7 @@
     text {
       fill: var(--color-muted);
       font-family: var(--font-body);
-      font-size: 10px;
+      font-size: 12px;
     }
   }
 
@@ -83,7 +83,7 @@
     text {
       fill: var(--color-muted);
       font-family: var(--font-body);
-      font-size: 10px;
+      font-size: 12px;
     }
   }
 
@@ -95,7 +95,7 @@
     }
 
     .periodTotal {
-      font-size: 11px;
+      font-size: 13px;
     }
 
     .chart {

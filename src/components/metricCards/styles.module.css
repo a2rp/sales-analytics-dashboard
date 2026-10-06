@@ -62,14 +62,14 @@
     color: #397b62;
     background: #e5f2ec;
     border-radius: 99px;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 700;
   }
 
   .label {
     margin-top: 12px;
     color: var(--color-muted);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
   }
 
@@ -86,7 +86,7 @@
   .note {
     margin-top: 4px;
     color: var(--color-muted);
-    font-size: 11px;
+    font-size: 13px;
   }
 
   .progress {

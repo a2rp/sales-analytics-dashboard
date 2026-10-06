@@ -22,7 +22,7 @@
     p {
       max-width: 250px;
       color: #bac5c9;
-      font-size: 11px;
+      font-size: 13px;
     }
 
     p a {
@@ -73,7 +73,7 @@
       padding: 3px 0;
       color: #d9e0e2;
       border-bottom: 1px solid transparent;
-      font-size: 11px;
+      font-size: 13px;
       white-space: nowrap;
       transition: border-color 160ms ease, box-shadow 160ms ease;
 

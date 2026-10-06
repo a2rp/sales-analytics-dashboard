@@ -22,7 +22,7 @@
     p {
       margin-top: 3px;
       color: #aab7bc;
-      font-size: 11px;
+      font-size: 13px;
     }
 
     > svg {
@@ -40,7 +40,7 @@
     padding-bottom: 14px;
     border-bottom: 1px solid #3b494f;
     color: #aab7bc;
-    font-size: 11px;
+    font-size: 13px;
 
     strong {
       color: var(--color-white);
@@ -87,19 +87,19 @@
 
   .stageName {
     color: #f6f7f7;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
   }
 
   .stageCount {
     color: #aab7bc;
-    font-size: 10px;
+    font-size: 12px;
     white-space: nowrap;
   }
 
   .stageValue {
     color: #f2a16f;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
   }
 
@@ -122,6 +122,6 @@
   .helperText {
     margin-top: 10px;
     color: #aab7bc;
-    font-size: 10px;
+    font-size: 12px;
   }
 }
