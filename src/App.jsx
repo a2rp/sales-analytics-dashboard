@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import AppFooter from './components/appFooter/index.jsx'
 import BackToTop from './components/backToTop/index.jsx'
 import Header from './components/header/index.jsx'
 import DealsTable from './components/dealsTable/index.jsx'
@@ -27,6 +28,7 @@ const App = () => {
         <DealsTable period={period} activeStage={activeStage} onStageChange={setActiveStage} />
         <TeamLeaderboard period={period} />
       </main>
+      <AppFooter />
       <BackToTop />
     </div>
   )
