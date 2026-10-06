@@ -41,6 +41,10 @@ const Header = () => {
           aria-label="Main navigation"
         >
           <a href="#overview" onClick={closeMenu}>Overview</a>
+          <a href="#revenue" onClick={closeMenu}>Revenue</a>
+          <a href="#pipeline" onClick={closeMenu}>Pipeline</a>
+          <a href="#deals" onClick={closeMenu}>Deals</a>
+          <a href="#team" onClick={closeMenu}>Team</a>
         </nav>
 
         <a

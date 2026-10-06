@@ -1,4 +1,5 @@
 .revenueChart {
+  scroll-margin-top: 90px;
   min-width: 0;
   padding: 22px 22px 13px;
   background: var(--color-white);

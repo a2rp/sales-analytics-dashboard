@@ -20,7 +20,7 @@ const RevenueChart = ({ report }) => {
   const areaPath = `${linePath} L ${points[points.length - 1].x} ${chartHeight - chartPadding.bottom} L ${points[0].x} ${chartHeight - chartPadding.bottom} Z`
 
   return (
-    <section className={styles.revenueChart} aria-labelledby="revenue-title">
+    <section className={styles.revenueChart} id="revenue" aria-labelledby="revenue-title">
       <div className={styles.header}>
         <div>
           <h2 id="revenue-title">Revenue over time</h2>
