@@ -1,0 +1,223 @@
+.teamLeaderboard {
+  margin-top: 14px;
+  padding: 22px 24px 16px;
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: 12px;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid var(--color-line);
+
+    h2 {
+      display: inline-block;
+      margin-left: 8px;
+      color: var(--color-ink);
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.025em;
+      vertical-align: middle;
+    }
+
+    p {
+      margin-top: 3px;
+      color: var(--color-muted);
+      font-size: 12px;
+    }
+  }
+
+  .titleIcon {
+    display: inline-grid;
+    width: 30px;
+    height: 30px;
+    place-items: center;
+    color: var(--color-orange-dark);
+    background: var(--color-orange-soft);
+    border-radius: 8px;
+    vertical-align: middle;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .marketNote {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 6px 10px 6px 6px;
+    background: var(--color-soft);
+    border: 1px solid var(--color-line);
+    border-radius: 9px;
+
+    img {
+      width: 66px;
+      height: 45px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    strong,
+    small {
+      display: block;
+    }
+
+    strong {
+      color: var(--color-ink);
+      font-size: 11px;
+    }
+
+    small {
+      margin-top: 2px;
+      color: var(--color-muted);
+      font-size: 10px;
+    }
+  }
+
+  .teamList {
+    display: grid;
+  }
+
+  .member {
+    display: grid;
+    grid-template-columns: 30px 38px minmax(150px, 1fr) minmax(200px, 0.8fr) 20px;
+    align-items: center;
+    gap: 12px;
+    min-height: 79px;
+    border-bottom: 1px solid #edf0f1;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  .rank {
+    color: #89969c;
+    font-family: var(--font-mono);
+    font-size: 11px;
+  }
+
+  .avatar {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    overflow: hidden;
+    place-items: center;
+    color: var(--color-ink);
+    background: #e2e9ed;
+    border: 1px solid var(--color-line);
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 700;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .identity {
+    strong,
+    small {
+      display: block;
+    }
+
+    strong {
+      color: var(--color-ink);
+      font-size: 13px;
+    }
+
+    small {
+      margin-top: 2px;
+      color: var(--color-muted);
+      font-size: 11px;
+    }
+  }
+
+  .results {
+    display: grid;
+    grid-template-columns: minmax(90px, auto) minmax(80px, 1fr);
+    align-items: center;
+    gap: 16px;
+  }
+
+  .resultText {
+    strong,
+    small {
+      display: block;
+      text-align: right;
+    }
+
+    strong {
+      color: var(--color-ink);
+      font-size: 12px;
+    }
+
+    small {
+      margin-top: 2px;
+      color: var(--color-muted);
+      font-size: 10px;
+    }
+  }
+
+  .track {
+    display: block;
+    height: 6px;
+    overflow: hidden;
+    background: #edf0f1;
+    border-radius: 99px;
+
+    span {
+      display: block;
+      height: 100%;
+      background: var(--color-orange);
+      border-radius: inherit;
+    }
+  }
+
+  .arrow {
+    width: 16px;
+    height: 16px;
+    color: #99a4a8;
+  }
+
+  .summary {
+    padding-top: 12px;
+    color: var(--color-muted);
+    font-size: 11px;
+  }
+
+  @media (max-width: 680px) {
+    padding: 17px 14px 14px;
+
+    .header {
+      align-items: start;
+      flex-direction: column;
+    }
+
+    .member {
+      grid-template-columns: 25px 36px minmax(100px, 1fr) 18px;
+      gap: 9px;
+      padding: 10px 0;
+    }
+
+    .results {
+      grid-column: 3 / -1;
+      grid-row: 2;
+      grid-template-columns: 1fr minmax(70px, 1fr);
+      gap: 10px;
+    }
+
+    .arrow {
+      grid-column: 4;
+      grid-row: 1;
+    }
+  }
+}

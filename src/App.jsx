@@ -5,6 +5,7 @@ import MetricCards from './components/metricCards/index.jsx'
 import PipelineFunnel from './components/pipelineFunnel/index.jsx'
 import ReportControls from './components/reportControls/index.jsx'
 import RevenueChart from './components/revenueChart/index.jsx'
+import TeamLeaderboard from './components/teamLeaderboard/index.jsx'
 import { reports } from './data/sales.js'
 import styles from './App.module.css'
 
@@ -23,6 +24,7 @@ const App = () => {
           <PipelineFunnel activeStage={activeStage} onStageChange={setActiveStage} />
         </div>
         <DealsTable period={period} activeStage={activeStage} onStageChange={setActiveStage} />
+        <TeamLeaderboard period={period} />
       </main>
     </div>
   )

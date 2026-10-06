@@ -84,9 +84,18 @@ export const stages = [
 export const dealStages = [...new Set(deals.map((deal) => deal.stage))]
 
 export const salesTeam = [
-  { name: 'Maya Chen', role: 'Enterprise', closed: 12, revenue: 284600, initials: 'MC', image: 'images/candidate-1027.jpg' },
-  { name: 'Evan Brooks', role: 'Mid-market', closed: 10, revenue: 241300, initials: 'EB', image: null },
-  { name: 'Jordan Lee', role: 'Growth', closed: 9, revenue: 198400, initials: 'JL', image: null },
+  {
+    name: 'Maya Chen', role: 'Enterprise', initials: 'MC', image: 'images/maya-chen.jpg',
+    results: { month: { closed: 4, revenue: 74300 }, quarter: { closed: 9, revenue: 223400 }, year: { closed: 12, revenue: 628000 } },
+  },
+  {
+    name: 'Evan Brooks', role: 'Mid-market', initials: 'EB', image: null,
+    results: { month: { closed: 3, revenue: 65900 }, quarter: { closed: 8, revenue: 201300 }, year: { closed: 10, revenue: 541300 } },
+  },
+  {
+    name: 'Jordan Lee', role: 'Growth', initials: 'JL', image: null,
+    results: { month: { closed: 2, revenue: 51800 }, quarter: { closed: 6, revenue: 185800 }, year: { closed: 9, revenue: 498400 } },
+  },
 ]
 
 export const formatCurrency = (amount) => new Intl.NumberFormat('en-US', {
