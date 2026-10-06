@@ -1,127 +1,129 @@
 .pipelineFunnel {
-  scroll-margin-top: 90px;
-  padding: 22px 20px 16px;
-  background: var(--color-ink);
-  border: 1px solid #323f45;
-  border-radius: 12px;
-  color: var(--color-white);
+    scroll-margin-top: 90px;
+    padding: 22px 20px 16px;
+    background: var(--color-ink);
+    border: 1px solid #323f45;
+    border-radius: 12px;
+    color: var(--color-white);
 
-  .header {
-    display: flex;
-    align-items: start;
-    justify-content: space-between;
-    gap: 12px;
+    .header {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: 12px;
 
-    h2 {
-      font-family: var(--font-display);
-      font-size: 21px;
-      font-weight: 600;
-      letter-spacing: -0.025em;
+        h2 {
+            font-family: var(--font-display);
+            font-size: 21px;
+            font-weight: 600;
+            letter-spacing: -0.025em;
+        }
+
+        p {
+            margin-top: 3px;
+            color: #aab7bc;
+            font-size: 13px;
+        }
+
+        > svg {
+            width: 17px;
+            height: 17px;
+            color: #f2a16f;
+        }
     }
 
-    p {
-      margin-top: 3px;
-      color: #aab7bc;
-      font-size: 13px;
+    .total {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        margin-top: 22px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid #3b494f;
+        color: #aab7bc;
+        font-size: 13px;
+
+        strong {
+            color: var(--color-white);
+            font-family: var(--font-display);
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: -0.025em;
+        }
     }
 
-    > svg {
-      width: 17px;
-      height: 17px;
-      color: #f2a16f;
+    .stageList {
+        display: grid;
+        gap: 6px;
+        margin-top: 12px;
     }
-  }
 
-  .total {
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-    margin-top: 22px;
-    padding-bottom: 14px;
-    border-bottom: 1px solid #3b494f;
-    color: #aab7bc;
-    font-size: 13px;
+    .stage {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 7px 12px;
+        width: 100%;
+        padding: 9px 9px 10px;
+        text-align: left;
+        background: transparent;
+        border: 1px solid transparent;
+        border-radius: 8px;
+        transition:
+            border-color 160ms ease,
+            box-shadow 160ms ease;
 
-    strong {
-      color: var(--color-white);
-      font-family: var(--font-display);
-      font-size: 24px;
-      font-weight: 600;
-      letter-spacing: -0.025em;
+        &:hover,
+        &:focus-visible,
+        &.active {
+            border-color: #687a81;
+            outline: none;
+            box-shadow: inset 0 0 0 1px rgb(255 255 255 / 4%);
+        }
     }
-  }
 
-  .stageList {
-    display: grid;
-    gap: 6px;
-    margin-top: 12px;
-  }
-
-  .stage {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 7px 12px;
-    width: 100%;
-    padding: 9px 9px 10px;
-    text-align: left;
-    background: transparent;
-    border: 1px solid transparent;
-    border-radius: 8px;
-    transition: border-color 160ms ease, box-shadow 160ms ease;
-
-    &:hover,
-    &:focus-visible,
-    &.active {
-      border-color: #687a81;
-      outline: none;
-      box-shadow: inset 0 0 0 1px rgb(255 255 255 / 4%);
+    .stageDetails {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        min-width: 0;
     }
-  }
 
-  .stageDetails {
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-    min-width: 0;
-  }
-
-  .stageName {
-    color: #f6f7f7;
-    font-size: 14px;
-    font-weight: 600;
-  }
-
-  .stageCount {
-    color: #aab7bc;
-    font-size: 12px;
-    white-space: nowrap;
-  }
-
-  .stageValue {
-    color: #f2a16f;
-    font-size: 14px;
-    font-weight: 700;
-  }
-
-  .track {
-    grid-column: 1 / -1;
-    display: block;
-    height: 4px;
-    overflow: hidden;
-    background: #35434a;
-    border-radius: 9px;
-
-    span {
-      display: block;
-      height: 100%;
-      background: #f2a16f;
-      border-radius: inherit;
+    .stageName {
+        color: #f6f7f7;
+        font-size: 14px;
+        font-weight: 600;
     }
-  }
 
-  .helperText {
-    margin-top: 10px;
-    color: #aab7bc;
-    font-size: 12px;
-  }
+    .stageCount {
+        color: #aab7bc;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .stageValue {
+        color: #f2a16f;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .track {
+        grid-column: 1 / -1;
+        display: block;
+        height: 4px;
+        overflow: hidden;
+        background: #35434a;
+        border-radius: 9px;
+
+        span {
+            display: block;
+            height: 100%;
+            background: #f2a16f;
+            border-radius: inherit;
+        }
+    }
+
+    .helperText {
+        margin-top: 10px;
+        color: #aab7bc;
+        font-size: 12px;
+    }
 }

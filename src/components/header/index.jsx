@@ -1,76 +1,105 @@
-import { useEffect, useRef, useState } from 'react'
-import { FaGithub } from 'react-icons/fa'
-import { LuChartNoAxesCombined, LuMenu, LuX } from 'react-icons/lu'
-import styles from './styles.module.css'
+import { useEffect, useRef, useState } from "react";
+import { FaGithub } from "react-icons/fa";
+import { LuChartNoAxesCombined, LuMenu, LuX } from "react-icons/lu";
+import styles from "./styles.module.css";
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
-  const headerRef = useRef(null)
+    const [menuOpen, setMenuOpen] = useState(false);
+    const headerRef = useRef(null);
 
-  useEffect(() => {
-    if (!menuOpen) return undefined
+    useEffect(() => {
+        if (!menuOpen) return undefined;
 
-    const closeOnEscape = (event) => {
-      if (event.key === 'Escape') setMenuOpen(false)
-    }
-    const closeOnOutsideClick = (event) => {
-      if (!headerRef.current?.contains(event.target)) setMenuOpen(false)
-    }
+        const closeOnEscape = (event) => {
+            if (event.key === "Escape") setMenuOpen(false);
+        };
+        const closeOnOutsideClick = (event) => {
+            if (!headerRef.current?.contains(event.target)) setMenuOpen(false);
+        };
 
-    document.addEventListener('keydown', closeOnEscape)
-    document.addEventListener('pointerdown', closeOnOutsideClick)
-    return () => {
-      document.removeEventListener('keydown', closeOnEscape)
-      document.removeEventListener('pointerdown', closeOnOutsideClick)
-    }
-  }, [menuOpen])
+        document.addEventListener("keydown", closeOnEscape);
+        document.addEventListener("pointerdown", closeOnOutsideClick);
+        return () => {
+            document.removeEventListener("keydown", closeOnEscape);
+            document.removeEventListener("pointerdown", closeOnOutsideClick);
+        };
+    }, [menuOpen]);
 
-  const closeMenu = () => setMenuOpen(false)
+    const closeMenu = () => setMenuOpen(false);
 
-  return (
-    <header className={styles.header} ref={headerRef}>
-      <div className={styles.inner}>
-        <a className={styles.brand} href="#top" onClick={closeMenu} aria-label="Quota dashboard home">
-          <span className={styles.mark}><LuChartNoAxesCombined aria-hidden="true" /></span>
-          <span className={styles.wordmark}>quota<span>.</span></span>
-        </a>
+    return (
+        <header className={styles.header} ref={headerRef}>
+            <div className={styles.inner}>
+                <a
+                    className={styles.brand}
+                    href="#top"
+                    onClick={closeMenu}
+                    aria-label="Quota dashboard home"
+                >
+                    <span className={styles.mark}>
+                        <LuChartNoAxesCombined aria-hidden="true" />
+                    </span>
+                    <span className={styles.wordmark}>
+                        quota<span>.</span>
+                    </span>
+                </a>
 
-        <nav
-          className={styles.navigation + ' ' + (menuOpen ? styles.open : '')}
-          id="primary-navigation"
-          aria-label="Main navigation"
-        >
-          <a href="#overview" onClick={closeMenu}>Overview</a>
-          <a href="#revenue" onClick={closeMenu}>Revenue</a>
-          <a href="#pipeline" onClick={closeMenu}>Pipeline</a>
-          <a href="#deals" onClick={closeMenu}>Deals</a>
-          <a href="#team" onClick={closeMenu}>Team</a>
-        </nav>
+                <nav
+                    className={
+                        styles.navigation + " " + (menuOpen ? styles.open : "")
+                    }
+                    id="primary-navigation"
+                    aria-label="Main navigation"
+                >
+                    <a href="#overview" onClick={closeMenu}>
+                        Overview
+                    </a>
+                    <a href="#revenue" onClick={closeMenu}>
+                        Revenue
+                    </a>
+                    <a href="#pipeline" onClick={closeMenu}>
+                        Pipeline
+                    </a>
+                    <a href="#deals" onClick={closeMenu}>
+                        Deals
+                    </a>
+                    <a href="#team" onClick={closeMenu}>
+                        Team
+                    </a>
+                </nav>
 
-        <a
-          className={styles.repository}
-          href="https://github.com/a2rp/sales-analytics-dashboard"
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Open the public GitHub repository"
-        >
-          <FaGithub aria-hidden="true" />
-          <span>Repository</span>
-        </a>
+                <a
+                    className={styles.repository}
+                    href="https://github.com/a2rp/sales-analytics-dashboard"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Open the public GitHub repository"
+                >
+                    <FaGithub aria-hidden="true" />
+                    <span>Repository</span>
+                </a>
 
-        <button
-          className={styles.menuButton}
-          type="button"
-          aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
-          aria-expanded={menuOpen}
-          aria-controls="primary-navigation"
-          onClick={() => setMenuOpen((open) => !open)}
-        >
-          {menuOpen ? <LuX aria-hidden="true" /> : <LuMenu aria-hidden="true" />}
-        </button>
-      </div>
-    </header>
-  )
-}
+                <button
+                    className={styles.menuButton}
+                    type="button"
+                    aria-label={
+                        menuOpen
+                            ? "Close navigation menu"
+                            : "Open navigation menu"
+                    }
+                    aria-expanded={menuOpen}
+                    aria-controls="primary-navigation"
+                    onClick={() => setMenuOpen((open) => !open)}
+                >
+                    {menuOpen ? (
+                        <LuX aria-hidden="true" />
+                    ) : (
+                        <LuMenu aria-hidden="true" />
+                    )}
+                </button>
+            </div>
+        </header>
+    );
+};
 
-export default Header
+export default Header;
